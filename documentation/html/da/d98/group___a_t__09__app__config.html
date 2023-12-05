@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>AT-09 zs040 ble (HM-10 ble clone) C STMicroelectronics driver library documentation: GPIO_def_t Struct Reference</title>
+<title>AT-09 zs040 ble (HM-10 ble clone) C STMicroelectronics driver library documentation: Application AT-09 zs040 BLE Driver Configuration File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -53,6 +53,7 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -74,37 +75,28 @@ $(function() {
 </div>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Data Fields</a>  </div>
-  <div class="headertitle"><div class="title">GPIO_def_t Struct Reference<div class="ingroups"><a class="el" href="../../df/d51/group__hm10__ble__clone.html">AT-09 CTFZ54812 ZS-040 Bluetooth Clone module</a></div></div></div>
+<a href="#define-members">Macros</a>  </div>
+  <div class="headertitle"><div class="title">Application AT-09 zs040 BLE Driver Configuration File<div class="ingroups"><a class="el" href="../../df/d51/group__hm10__ble__clone.html">AT-09 CTFZ54812 ZS-040 Bluetooth Clone module</a> &raquo; <a class="el" href="../../dd/d7f/group__main___a_t__09__config.html">AT-09 zs040 BLE Device Configuration Files</a></div></div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>GPIO Definition parameters structure.  
- <a href="../../db/d26/struct_g_p_i_o__def__t.html#details">More...</a></p>
-
-<p><code>#include &lt;<a class="el" href="../../da/da3/_a_t-09__zs040__ble__driver_8h_source.html">AT-09_zs040_ble_driver.h</a>&gt;</code></p>
+<p>This file should contain all the AT-09 zs040 BLE Driver Configurations made by the user/implementor.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
-Data Fields</h2></td></tr>
-<tr class="memitem:a9da2387f3722481cba1e6a616ca988eb"><td class="memItemLeft" align="right" valign="top"><a id="a9da2387f3722481cba1e6a616ca988eb" name="a9da2387f3722481cba1e6a616ca988eb"></a>
-GPIO_TypeDef *&#160;</td><td class="memItemRight" valign="bottom"><b>GPIO_Port</b></td></tr>
-<tr class="memdesc:a9da2387f3722481cba1e6a616ca988eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type Definition of the GPIO peripheral port to which this <a class="el" href="../../db/d26/struct_g_p_i_o__def__t.html">GPIO_def_t</a> structure will be associated with. <br /></td></tr>
-<tr class="separator:a9da2387f3722481cba1e6a616ca988eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa373ad2ea1e7d821666973997143ecfd"><td class="memItemLeft" align="right" valign="top"><a id="aa373ad2ea1e7d821666973997143ecfd" name="aa373ad2ea1e7d821666973997143ecfd"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><b>GPIO_Pin</b></td></tr>
-<tr class="memdesc:aa373ad2ea1e7d821666973997143ecfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pin number of the GPIO peripheral from to this <a class="el" href="../../db/d26/struct_g_p_i_o__def__t.html">GPIO_def_t</a> structure will be associated with. <br /></td></tr>
-<tr class="separator:aa373ad2ea1e7d821666973997143ecfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:gaafbe0bb20abaf78fe114ae1d25810143"><td class="memItemLeft" align="right" valign="top"><a id="gaafbe0bb20abaf78fe114ae1d25810143" name="gaafbe0bb20abaf78fe114ae1d25810143"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ETX_OTA_VERBOSE</b>&#160;&#160;&#160;(1)</td></tr>
+<tr class="memdesc:gaafbe0bb20abaf78fe114ae1d25810143"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag value used to enable the compiler to take into account the code of both the <a class="el" href="../../df/d51/group__hm10__ble__clone.html">AT-09 CTFZ54812 ZS-040 Bluetooth Clone module</a> library that displays detailed information about the processes made inside them via printf with a <code>1</code> . Otherwise, a <code>0</code> for not displaying any messages at all with printf . <br /></td></tr>
+<tr class="separator:gaafbe0bb20abaf78fe114ae1d25810143"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>GPIO Definition parameters structure. </p>
-<p>This contains all the fields required to associate a certain GPIO pin to either the STATE pin of the HM-10 Clone BLE Device Hardware or the MCU pin from which it can be requested to reset the settings of the HM-10 Clone BLE Device.</p>
-<dl class="section note"><dt>Note</dt><dd>This structure is meant to be used whenever this module is implemented at the ETX OTA Protocol library made by Mortrack. Therefore, if you do not use this module together with that protocol, feel free to remove this struct in case you want to free memory from your MCU/MPU. </dd></dl>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>C:/Users/cmira/OneDrive/Escritorio/GitHub/AT-09_zs040_ble_driver/Inc/<a class="el" href="../../da/da3/_a_t-09__zs040__ble__driver_8h_source.html">AT-09_zs040_ble_driver.h</a></li>
-</ul>
+<p>This file should contain all the AT-09 zs040 BLE Driver Configurations made by the user/implementor. </p>
+<dl class="section note"><dt>Note</dt><dd>It is highly suggested not to directly edit the Configurations Settings defined in this file. Instead of doing that whenever requiring different Configuration Settings, it is suggested to do that instead in an additional header file named as "AT-09_app_config.h" whose File Path should be located as a sibbling of this <a class="el" href="../../df/db4/group___a_t__09__config.html">Default ETX OTA Protocol Configuration File</a> header file. However, to enable the use of that additional header file, you will also need to change the <a class="el" href="../../df/db4/group___a_t__09__config.html#ga5c611ca264d3cb672a8e5ce86361d08f">ENABLE_APP_AT09_CONFIG</a> define, that is located at <a class="el" href="../../df/db4/group___a_t__09__config.html">Default ETX OTA Protocol Configuration File</a> , to a value of 1.</dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Cesar Miranda Meza (<a href="#" onclick="location.href='mai'+'lto:'+'cmi'+'ra'+'nda'+'me'+'za3'+'@h'+'otm'+'ai'+'l.c'+'om'; return false;">cmira<span class="obfuscator">.nosp@m.</span>ndam<span class="obfuscator">.nosp@m.</span>eza3@<span class="obfuscator">.nosp@m.</span>hotm<span class="obfuscator">.nosp@m.</span>ail.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>December 05, 2023. </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

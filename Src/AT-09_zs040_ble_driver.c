@@ -2,7 +2,7 @@
  * @{
  */
 
-#include "hm10_ctfz54182_zs040_clone_ble.h"
+#include "AT-09_zs040_ble_driver.h"
 #include <string.h>	// Library from which "memset()" and "memcpy()" are located at.
 
 #define HM10_CLONE_MAX_AT_COMMAND_SIZE							(21)		/**< @brief Total maximum bytes in a Tx/Rx AT Command of the HM-10 Clone BLE Device. */

@@ -70,8 +70,13 @@
  *          implementer requires an application reference:
  *
  * @code
+  #include <stdio.h>	// Library from which "printf" is located at.
+  #include <stdint.h> // This library contains the aliases: uint8_t, uint16_t, uint32_t, etc.
+  #include "AT-09_config.h" // This custom Mortrack's library contains configurations of the AT-09 zs040 BLE Driver Library, as well as all the functions, definitions and variables required for that Driver Library.
+
   // Initializing the HM-10 CTFZ54812 ZS-040 Bluetooth Clone module.
   init_hm10_clone_module(&huart3); // Initializing the HM-10 CTFZ54812 ZS-040 Bluetooth Clone module with the UART of your preference, where I used UART3 as an example.
+  const uint16_t GPIO_hm10_state_Pin = GPIO_PIN_15; // Label for the GPIO Pin 15 towards which the GPIO Pin PC15 in Input Mode is at, which is used to read the STATE Pin of the AT-09 BLE Device. The following are the possible values of that STATE Pin:<br><br>* 0 (i.e., Low State) = The HM-10 Clone BLE Device is not connected with an external BLE Device.<br>* 1 (i.e., High State) = The HM-10 Clone BLE Device is currently connected with an external BLE Device.
   HM10_Clone_Status ret; // Local variable used to hold the exception code values returned by functions of the HM-10 CTFZ54812 ZS-040 Bluetooth Clone module.
 
   // Sending Test Command.
@@ -237,11 +242,11 @@
  * @endcode
  *
  * @author 	Cesar Miranda Meza (cmirandameza3@hotmail.com)
- * @date	November 30, 2023.
+ * @date	December 05, 2023.
  */
 
-#ifndef HM10_CTFZ54182_ZS040_CLONE_BLE_H_
-#define HM10_CTFZ54182_ZS040_CLONE_BLE_H_
+#ifndef AT_09_ZS040_BLE_DRIVER_H_
+#define AT_09_ZS040_BLE_DRIVER_H_
 
 #include "stm32f1xx_hal.h" // This is the HAL Driver Library for the STM32F1 series devices. If yours is from a different type, then you will have to substitute the right one here for your particular STMicroelectronics device. However, if you cant figure out what the name of that header file is, then simply substitute this line of code by: #include "main.h"
 #include <stdio.h>	// Library from which "printf" is located at.
@@ -304,6 +309,10 @@ typedef enum
  * @details This contains all the fields required to associate a certain GPIO pin to either the STATE pin of the HM-10
  *          Clone BLE Device Hardware or the MCU pin from which it can be requested to reset the settings of the HM-10
  *          Clone BLE Device.
+ *
+ * @note    This structure is meant to be used whenever this module is implemented at the ETX OTA Protocol library made
+ *          by Mortrack. Therefore, if you do not use this module together with that protocol, feel free to remove this
+ *          struct in case you want to free memory from your MCU/MPU.
  */
 typedef struct __attribute__ ((__packed__)) {
 	GPIO_TypeDef *GPIO_Port;	//!< Type Definition of the GPIO peripheral port to which this @ref GPIO_def_t structure will be associated with.
@@ -592,6 +601,6 @@ HM10_Clone_Status get_hm10clone_ota_data(uint8_t *ble_ota_data, uint16_t size, u
  */
 HM10_Clone_Status init_hm10_clone_module(UART_HandleTypeDef *huart);
 
-#endif /* HM10_CTFZ54182_ZS040_CLONE_BLE_H_ */
+#endif /* AT_09_ZS040_BLE_DRIVER_H_ */
 
 /** @} */
