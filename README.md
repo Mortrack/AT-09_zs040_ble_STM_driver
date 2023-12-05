@@ -1,9 +1,10 @@
 # AT-09 zs040 ble (HM-10 ble clone) C driver library
 
 This library provides the definitions, variables and functions necessary so that its implementer can use and communicate
-with an AT-09 zs040 ble (HM-10 ble clone) device. However, know that this driver library contains only the main
-functions required for it to work in Slave Mode since there are several complications that makes this device not very
-reliable in Central mode. For more details about this and to learn how to use this library, feel free to read the
+with an AT-09 zs040 ble (HM-10 ble clone) device from a microcontroller/microprocessor of the STMicroelectronics device 
+family. However, know that this driver library contains only the main functions required for it to work in Slave Mode
+since there are several complications that makes this device not very reliable in Central mode. For more details about
+this and to learn how to use this library, feel free to read the
 <a href=https://github.com/Mortrack/AT-09_zs040_ble_driver/tree/main/documentation>documentation of this project</a>.
 
 # How to explore the CenyML project files.
