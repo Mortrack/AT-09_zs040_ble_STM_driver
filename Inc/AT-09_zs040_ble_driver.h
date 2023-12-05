@@ -251,7 +251,7 @@
 #include "stm32f1xx_hal.h" // This is the HAL Driver Library for the STM32F1 series devices. If yours is from a different type, then you will have to substitute the right one here for your particular STMicroelectronics device. However, if you cant figure out what the name of that header file is, then simply substitute this line of code by: #include "main.h"
 #include <stdio.h>	// Library from which "printf" is located at.
 #include <stdint.h> // This library contains the aliases: uint8_t, uint16_t, uint32_t, etc.
-#include "AT-09_config.h" // This custom Mortrack's library contains configurations of the AT-09 zs040 BLE Driver Library, as well as all the functions, definitions and variables required for that Driver Library.
+#include "AT-09_config.h" // This custom Mortrack's library contains configurations of the AT-09 zs040 BLE Driver Library.
 
 #define HM10_CLONE_MAX_BLE_NAME_SIZE							(12)		/**< @brief Total maximum bytes that the BLE Name of the HM-10 Clone BLE Device can have. */
 #define HM10_CLONE_PIN_VALUE_SIZE								(6)			/**< @brief Length in bytes of the Pin value in a HM-10 Clone BLE device. */
