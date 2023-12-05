@@ -1,35 +1,27 @@
 # AT-09 zs040 ble (HM-10 ble clone) C driver library
 
-This library provides the variables and functions necessary so that its implementer can invoke the CRC32-MPEG2 algorithm
-in a simple and friendly way. However, my deep desire is to clarify that I, César Miranda Meza, did not invented this
-algorithm, nor I developed its code. In fact, I do not know who was it that did that, but I learned about it from the
-<a href=https://github.com/Embetronicx/STM32-Bootloader/blob/main/Bootloader_Example/HostApp/PcTool/etx_ota_update_main.c>
-the code from the STM32-Bootloader made by Embetronicx</a>, but where here, the purpose of it is to simply provide it in
-an independent and formal format with well Doxygen-documented files so that they can be easily reused by the community.
+This library provides the definitions, variables and functions necessary so that its implementer can use and communicate
+with an AT-09 zs040 ble (HM-10 ble clone) device. However, know that this driver library contains only the main
+functions required for it to work in Slave Mode since there are several complications that makes this device not very
+reliable in Central mode. For more details about this and to learn how to use this library, feel free to read the
+<a href=https://github.com/Mortrack/AT-09_zs040_ble_driver/tree/main/documentation>documentation of this project</a>.
 
-## How to use this library
+# How to explore the CenyML project files.
+The following will describe the general purpose of the folders that are located in the current directory address:
 
-To use this library, simply include the header file via the following line of code in your C program:
-
-```c
-#include "crc32_mpeg2.h"
-```
-
-and then just call the following function from the
-<a href=https://github.com/Mortrack/CRC32-MPEG2/blob/main/Inc/crc32_mpeg2.h>crc32_mpeg2.h</a> header file whenever you
-want to calculate the CRC32-MPEG over a desired given input data:
-
-```c
-uint32_t crc32_mpeg2(uint8_t *p_data, uint32_t data_length);
-```
-
-where to learn more about how to receive the result calculated from the algorithm and how to interpret the parameters of
-that function, read the Doxygen-documentation accompanied by that function in the
-<a href=https://github.com/Mortrack/CRC32-MPEG2/blob/main/Inc/crc32_mpeg2.h>crc32_mpeg2.h</a> header file.
+- **/'Inc'**:
+    - This folder contains the header files required for this library to work, where you will find the following:
+      - <a href=https://github.com/Mortrack/AT-09_zs040_ble_driver/blob/main/Inc/AT-09_zs040_ble_driver.h>The actual driver library</a>.
+      - Two configuration files for your AT-09 device:
+        - <a href=https://github.com/Mortrack/AT-09_zs040_ble_driver/blob/main/Inc/AT-09_config.h>The default configurations file<a/> for any AT-09 device with which this library is used with (this file should not be modified).
+        - <a href=https://github.com/Mortrack/AT-09_zs040_ble_driver/blob/main/Inc/AT-09_app_config.h>The application's configurations file</a> for any AT-09 device with which this library is used with (this is the file that should be modified in case that you want to have custom configurations).
+- **/'Src'**:
+    - This folder contains the <a href=https://github.com/Mortrack/AT-09_zs040_ble_driver/blob/main/Src/AT-09_zs040_ble_driver.c>source code file for this library</a>.
+- **/documentation**:
+    - This folder provides the documentation to learn all the details of this library and to know how to use it. 
 
 ## Future additions planned for this library
 
-Although I cannot commit to do the following soon, at some point, I plan to segment several folders where I would like
-to add several libraries to enable calling the CRC32-MPEG2 algorithm but in different programming languages and not to
-just provide it in C programming language, where I also will place effort in providing it with good programming
-practices and documentation.
+Although I cannot commit to do the following soon, at some point if this project is useful for other people, then I plan
+to continue adding more functions so that this can be a complete library with all the actual features of an AT-09
+Bluetooth device.
