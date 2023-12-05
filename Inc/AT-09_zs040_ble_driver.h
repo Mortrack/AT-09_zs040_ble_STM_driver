@@ -72,7 +72,7 @@
  * @code
   #include <stdio.h>	// Library from which "printf" is located at.
   #include <stdint.h> // This library contains the aliases: uint8_t, uint16_t, uint32_t, etc.
-  #include "AT-09_config.h" // This custom Mortrack's library contains configurations of the AT-09 zs040 BLE Driver Library, as well as all the functions, definitions and variables required for that Driver Library.
+  #include "AT-09_zs040_ble_driver.h" // This custom Mortrack's library contains the AT-09 zs040 BLE Driver Library.
 
   // Initializing the HM-10 CTFZ54812 ZS-040 Bluetooth Clone module.
   init_hm10_clone_module(&huart3); // Initializing the HM-10 CTFZ54812 ZS-040 Bluetooth Clone module with the UART of your preference, where I used UART3 as an example.
@@ -250,8 +250,8 @@
 
 #include "stm32f1xx_hal.h" // This is the HAL Driver Library for the STM32F1 series devices. If yours is from a different type, then you will have to substitute the right one here for your particular STMicroelectronics device. However, if you cant figure out what the name of that header file is, then simply substitute this line of code by: #include "main.h"
 #include <stdio.h>	// Library from which "printf" is located at.
-#include "etx_ota_config.h" // Custom Library used for configuring the ETX OTA protocol.
 #include <stdint.h> // This library contains the aliases: uint8_t, uint16_t, uint32_t, etc.
+#include "AT-09_config.h" // This custom Mortrack's library contains configurations of the AT-09 zs040 BLE Driver Library, as well as all the functions, definitions and variables required for that Driver Library.
 
 #define HM10_CLONE_MAX_BLE_NAME_SIZE							(12)		/**< @brief Total maximum bytes that the BLE Name of the HM-10 Clone BLE Device can have. */
 #define HM10_CLONE_PIN_VALUE_SIZE								(6)			/**< @brief Length in bytes of the Pin value in a HM-10 Clone BLE device. */
