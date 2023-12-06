@@ -779,7 +779,8 @@ static HM10_Clone_Status send_get_name_cmd(uint8_t *hm10_name, uint8_t *size)
 				{
 					printf("ERROR: A BLE Name from the HM-10 Clone BLE Device was expected, but none was received (HM-10 Clone Exception code = %d)\r\n", ret);
 				}
-			#endif
+            #endif
+            *size = 0;
 			return ret;
 		}
 
