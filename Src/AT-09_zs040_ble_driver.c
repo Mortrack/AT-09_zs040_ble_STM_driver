@@ -1379,7 +1379,7 @@ static HM10_Clone_Status send_set_type_cmd(HM10_Clone_Pin_Code_Mode pin_code_mod
 			break;
 		default:
 			#if ETX_OTA_VERBOSE
-				printf("ERROR: An invalid pin code value has been given: %c_ASCII.\r\n", pin_code_mode);
+				printf("ERROR: An invalid pin code mode value has been given: %c_ASCII.\r\n", pin_code_mode);
 			#endif
 			return HM10_Clone_EC_ERR;
 	}
@@ -1611,7 +1611,7 @@ static HM10_Clone_Status send_get_type_cmd(HM10_Clone_Pin_Code_Mode *pin_code_mo
 			break;
 		default:
 			#if ETX_OTA_VERBOSE
-				printf("ERROR: An invalid pin code value has been given: %c_ASCII.\r\n", TxRx_Buffer[bytes_compared]);
+				printf("ERROR: An invalid pin code mode value has been given: %c_ASCII.\r\n", TxRx_Buffer[bytes_compared]);
 			#endif
 			return HM10_Clone_EC_ERR;
 	}
