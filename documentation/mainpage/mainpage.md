@@ -11,11 +11,11 @@ to this project, know that all the functions, variables and definitions of the s
 library are also documented with Doxygen syntax/format even though that their documentation is not shown here.
 
 On the other hand, for reaching out a code example for implementing this library, review the detailed description of the
-<a href=file:///C:/Users/cmira/OneDrive/Escritorio/GitHub/AT-09_zs040_ble_driver/documentation/html/df/d51/group__hm10__ble__clone.html#details>AT-09 CTFZ54812 ZS-040 Bluetooth Clone module</a>.
+<a href=file:///C:/Users/cmira/OneDrive/Escritorio/GitHub/AT-09_zs040_ble_STM_driver/documentation/html/df/d51/group__hm10__ble__clone.html#details>AT-09 CTFZ54812 ZS-040 Bluetooth Clone module</a>.
 
 Last but not least, the configurations and details of the microcontroller used for testing and validating this library
 can be reviewed at the
-<a href=https://github.com/Mortrack/AT-09_zs040_ble_driver/blob/main/documentation/pdfs/STM32CubeMX_configurations_report.pdf>STM32CubeMX_configurations_report.pdf</a>
+<a href=https://github.com/Mortrack/AT-09_zs040_ble_STM_driver/blob/main/documentation/pdfs/STM32CubeMX_configurations_report.pdf>STM32CubeMX_configurations_report.pdf</a>
 file, where it is important to highlight that the UART1 was used for the printf() function of the stdio.h C library and
 that the UART3 was used for the AT-09 device.
 
