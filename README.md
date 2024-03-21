@@ -1,5 +1,7 @@
 # AT-09 zs040 ble (HM-10 ble clone) C STMicroelectronics driver library
 
+Version: 1.0.2.2
+
 This library provides the definitions, variables and functions necessary so that its implementer can use and communicate
 with an AT-09 zs040 ble (HM-10 ble clone) device from a microcontroller/microprocessor of the STMicroelectronics device 
 family and, in particular, via the STM32CubeIDE app. However, know that this driver library contains only the main
