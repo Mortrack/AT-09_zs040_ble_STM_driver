@@ -307,14 +307,15 @@ static void HAL_uart_rx_flush();
  * @param HAL_status	HAL Status value (see @ref HAL_StatusTypeDef ) that wants to be converted into its equivalent
  * 						of a @ref HM10_Clone_Status value.
  *
- * @retval				HM10_Clone_EC_NR if \p HAL_status param equals \c HAL_BUSY or \c ETX_CUSTOM_HAL_TIMEOUT .
+ * @retval				HM10_Clone_EC_NR if \p HAL_status param equals \c HAL_BUSY or \c HAL_TIMEOUT .
  * @retval				HM10_Clone_EC_ERR if \p HAL_status param equals \c HAL_ERROR .
  * @retval				HAL_status param otherwise.
  *
  * @note	For more details on the returned values listed, see @ref HM10_Clone_Status and @ref HAL_StatusTypeDef .
  *
  * @author	César Miranda Meza (cmirandameza3@hotmail.com)
- * @date October 17, 2023.
+ * @date 	October 17, 2023.
+ * @date    LAST UPDATE: June 21, 2024.
  */
 static HM10_Clone_Status HAL_ret_handler(HAL_StatusTypeDef HAL_status);
 

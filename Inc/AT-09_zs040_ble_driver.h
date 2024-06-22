@@ -243,6 +243,7 @@
  *
  * @author 	Cesar Miranda Meza (cmirandameza3@hotmail.com)
  * @date	December 05, 2023.
+ * @date    LAST UPDATE: June 21, 2024.
  */
 
 #ifndef AT_09_ZS040_BLE_DRIVER_H_
